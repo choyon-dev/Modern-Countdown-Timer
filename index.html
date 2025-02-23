@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="icon" href="assets/timer-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="glass-card">
+            <h1>Countdown Timer</h1>
+            <div class="controls">
+                <button id="sound-toggle">🔊</button>
+                <button id="theme-toggle">☀️</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="datetime-picker glass-card">
+                <input type="date" id="date-input" required>
+                <input type="time" id="time-input" required>
+                <button id="set-timer">⏱️ Set Timer</button>
+            </div>
+
+            <div class="countdown-display glass-card">
+                <div class="time-unit">
+                    <div class="number" id="days">00</div>
+                    <div class="label">Days</div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle class="progress" cx="60" cy="60" r="54"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="time-unit">
+                    <div class="number" id="hours">00</div>
+                    <div class="label">Hours</div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle class="progress" cx="60" cy="60" r="54"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="time-unit">
+                    <div class="number" id="minutes">00</div>
+                    <div class="label">Minutes</div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle class="progress" cx="60" cy="60" r="54"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="time-unit">
+                    <div class="number" id="seconds">00</div>
+                    <div class="label">Seconds</div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle class="progress" cx="60" cy="60" r="54"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-controls glass-card">
+                <button id="start-pause" class="neumorphic">▶ Start</button>
+                <button id="reset" class="neumorphic">🔄 Reset</button>
+            </div>
+        </main>
+
+        <div class="modal glass-card">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
